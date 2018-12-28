@@ -58,29 +58,24 @@ wifi-menu
 
 ## install base system
 
-
 ```bash
 # get scripts
 pacman -S git
-git clone https://github.com/Veit96/dotfiles.git dotfiles
+git clone https://github.com/Veit96/bootstrapping.git bootstrapping
 
 # launch first script
 # choose mirror
-./script_install1.sh
+./install_base_system.sh
 
-# configure fstab, the options should be like this (for SSD):
-root: rw,defaults,noatime,discard	0 1
-home: rw,defaults,noatime,discard  0 2
-boot: rw,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
-swap: defaults,noatime,discard,pri=-2   0 0
 
 # change root to new system
+mv bootstrapping /mnt/
 arch-chroot /mnt/
 
 # launch second script
 # choose hostname, default "arch"
 # in /etc/locale.gen uncomment all en_US, de_CH, de_DE
-./script_install2.sh
+./install_in_chroot.sh
 ```
 
 
@@ -93,36 +88,31 @@ reboot
 # login as root
 ```
 
-# launch third script:
-./script_install3.sh
+
+## add user, install essential programs
+
+make sure to modify the user name before launching script.
+
+`./install_after_reboot.sh`
+
+relogin as user
+
+`/install_as_user.sh`
+
+
+## configure fstab to be similar to this in case of SSD
+
+```bash
+root: rw,defaults,noatime,discard	0 1
+home: rw,defaults,noatime,discard  0 2
+boot: rw,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
+swap: defaults,noatime,discard,pri=-2   0 0
+```
 
 
 # CUSTOMIZE SYSTEM
 
-## install packages
-
-```bash
-pacman -S $(< my_packages.txt)
-localectl set-x11-keymap ch pc105 de_nodeadkeys caps:swapescape
-pacman -S xorg-drivers
-zsh
-chsh -l
-chsh -s /bin/zsh
-pacman -S libinput
-```
-
-
-## install yay (aur helper)
-
-```bash
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ..
-rm -rf yay
-```
-
-## aur packages
+## install aur packages
 
 - urxvt-resize-font-git
 - polybar
@@ -135,15 +125,13 @@ rm -rf yay
 ## install configs
 
 ```bash
-pacman -S git
-mkdir .dotfiles
 git clone https://github.com/Veit96/dotfiles.git .dotfiles
 cd .dotfiles
 ./install
 ````
 
 
-## install lightdm greeter (login/display manager)
+## configure lightdm greeter (login/display manager)
 
 ```bash
 systemctl enable lightdm.service
@@ -155,6 +143,7 @@ systemctl enable lightdm.service
 ...
 greeter-session=lightdm-webkit2-greeter
 ...
+# in case of multiple monitors
 display-setup-script=xrandr --output DP-0 --rotate left --pos 0x0 --output DP-2 --primary --pos 1440x530
 #or
 display-setup-script=xrandr --output DP-2 --primary
@@ -169,9 +158,10 @@ webkit-theme = litarvan
 ```
 
 # LAPTOP/NOTEBOOK SPECIFIC
+Launch *install_laptop.sh*
 
 ```bash
-pacman -S xf86-input-synaptics
+??? pacman -S xf86-input-synaptics
 ```
 
 
@@ -184,7 +174,7 @@ Section "Device"
         Identifier "Nvidia Card"
         Driver "nvidia"
         VendorName "NVIDIA Corporation"
-        BoardName "GeForce GTX 780"
+        BoardName "GeForce GTX 1070"
         Option "Coolbits" "28"
 EndSection
 
@@ -208,9 +198,10 @@ LABEL=share		/home/veit/share	ntfs-3g		utf8,uid=1000,gid=1000,dmask=027,fmask=13
 
 # ADDITIONAL SETTINGS
 
+
 ## pacman stuff:
 uncomment "#Color" for color pacman
-add aur
+
 
 ## vim stuff:
 - vim-jedi

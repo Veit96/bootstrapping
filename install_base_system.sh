@@ -9,4 +9,3 @@ vim /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel intel-ucode networkmanager vim git
 
 genfstab -Lp /mnt >> /mnt/etc/fstab
-

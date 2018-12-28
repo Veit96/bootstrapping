@@ -3,6 +3,7 @@
 # set by user:
 myhostname="arch"
 
+
 ln -sf /usr/share/zoneinfo/Europe/Zurich /etc/localtime
 
 vim /etc/locale.gen
@@ -29,6 +30,6 @@ EOT
 mkinitcpio -p linux
 passwd
 
-pacman -S grub os-prober efibootmgr dosfstools gptfdisk
+pacman --noconfirm --needed -S grub os-prober efibootmgr dosfstools gptfdisk
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --recheck --debug
 grub-mkconfig -o /boot/grub/grub.cfg

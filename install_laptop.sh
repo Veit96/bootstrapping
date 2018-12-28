@@ -7,11 +7,13 @@ systemctl mask systemd-rfkill.service
 systemctl mask systemd-rfkill.socket
 
 # grafik drivers
+sudo pacman --needed -S xorg-drivers
 
 # touchpad
-sudo pacman -S libinput
+sudo pacman --needed -S libinput
+
 # put the following in /etc/X11/xorg.conf.d/30-touchpad.conf
-# --> include /etc/X11/xorg.conf.d/... in configuration
+cat <<EOT >> /etc/X11/xorg.conf.d/30-touchpad.conf
 Section "InputClass"
     Identifier "touchpad"
     Driver "libinput"
@@ -21,8 +23,13 @@ Section "InputClass"
     Option "HorizontalScrolling" "on"
     Option "DisableWhileTyping" "on"
 EndSection
+EOT
 
-
-# fingerprint reader
+# Bluetooth: blueman, enable bluetooth.service
+sudo pacman --needed -S blueman
+systemctl enable bluetooth.service
+systemctl start bluetooth.service
 
 # media buttons?
+
+# fingerprint reader

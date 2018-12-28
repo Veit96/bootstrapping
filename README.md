@@ -1,2 +1,3 @@
 # bootstrapping
-automates the task of installing arch linux
+automates tedious tasks in the installation of arch linux.
+
