@@ -62,6 +62,7 @@ cmake
 
 # CONNECTION
 networkmanager
+network-manager-applet
 bluez
 bluez-utils
 

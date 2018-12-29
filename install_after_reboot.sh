@@ -1,5 +1,7 @@
 #!/bin/sh
 
+systemctl enable NetworkManager.service
+
 echo "Enter username:"
 user_name="veit"
 
@@ -14,7 +16,7 @@ gpasswd -a $user_name wheel
 
 # add to audio,video,games,power too?
 
-pacman --noconfirm --needed -S acpid dbus avahi dbus cronie
+pacman --noconfirm --needed -S acpid dbus avahi cups cronie
 systemctl enable acpid
 systemctl enable avahi-daemon
 systemctl enable cronie
@@ -23,5 +25,4 @@ systemctl enable systemd-timesyncd.service
 systemctl start systemd-timesyncd.service
 hwclock -w
 
-# keyboard settings (swapping escape and capslock)
-localectl set-x11-keymap ch pc105 de_nodeadkeys caps:swapescape
+
