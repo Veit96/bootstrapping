@@ -20,6 +20,8 @@ ranger
 nautilus
 transmission-gtk
 deepin-screenshot
+deepin-system-monitor
+htop
 nitrogen
 cups
 
@@ -52,7 +54,6 @@ tmux
 neofetch
 
 # COMMAND LINE TOOLS
-htop
 python-pip
 ncdu
 ntfs-3g
@@ -79,6 +80,7 @@ playerctl
 pavucontrol
 
 # FONTS / VISUALS / LOOKS / APPEARANCE
+lxappearance
 ttf-font-awesome
 ttf-dejavu
 ttf-inconsolata
