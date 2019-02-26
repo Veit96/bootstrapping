@@ -60,6 +60,7 @@ ntfs-3g
 openssh
 p7zip
 cmake
+lshw
 
 # CONNECTION
 networkmanager
