@@ -58,6 +58,7 @@ python-pip
 ncdu
 ntfs-3g
 openssh
+openconnect
 p7zip
 cmake
 lshw
