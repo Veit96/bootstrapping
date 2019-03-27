@@ -24,6 +24,8 @@ deepin-system-monitor
 htop
 nitrogen
 cups
+dnsutils
+wget
 
 # BROWSER
 chromium
