@@ -222,6 +222,12 @@ uncomment "#Color" for color pacman
 This was needed to launch the graphical matlab installer from terminal with sudo privileges
 uncomment `Defaults env_keep += “HOME”` in `/etc/sudoers`
 
+## Swappiness
+If enough RAM is available, you might want to decrease swappiness level from
+60 to 10. To do so, check your current swappiness with
+`cat /sys/fs/cgroup/memory/memory.swappiness`
+Afterwards put `vm.swappiness=10` in `/etc/sysctl.d/99-sysctl.conf`
+
 
 # PROGRAMMS FOR CERTAIN TASKS
 
@@ -243,6 +249,7 @@ uncomment `Defaults env_keep += “HOME”` in `/etc/sudoers`
 - firewall -> ufw
 - BitTorrent client -> transmission
 - Screenshot -> deepin-screenshot
+- Polkit authentication agent -> lxsession
 
 
 

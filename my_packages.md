@@ -26,6 +26,7 @@ nitrogen
 cups
 dnsutils
 wget
+lxsession
 
 # BROWSER
 chromium
