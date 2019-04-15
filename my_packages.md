@@ -20,7 +20,7 @@ ranger
 nautilus
 transmission-gtk
 deepin-screenshot
-deepin-system-monitor
+glances
 htop
 nitrogen
 cups
