@@ -92,8 +92,7 @@ pulseaudio
 playerctl
 pavucontrol
 
-# FONTS / VISUALS / LOOKS / APPEARANCE
-lxappearance
+# FONTS
 ttf-font-awesome
 ttf-dejavu
 ttf-inconsolata
@@ -102,5 +101,12 @@ terminus-font
 adobe-source-code-pro-fonts
 powerline
 powerline-fonts
+
+# THEMES
+arc-icon-theme
+arc-gtk-theme
+
+# VISUALS / LOOKS / APPEARANCE
+lxappearance
 python-pywal
 compton
