@@ -27,6 +27,7 @@ cups
 dnsutils
 wget
 lxsession
+etcher-bin
 
 # BROWSER
 chromium
@@ -42,6 +43,11 @@ okular
 git
 gvim
 zeal
+tk
+python-matplotlib
+python-numpy
+python-scipy
+python-pillow
 
 # MARKUP LANGUAGES / LATEX / MARKDOWN
 pandoc
@@ -65,6 +71,7 @@ openconnect
 p7zip
 cmake
 lshw
+smartmontools
 
 # CONNECTION
 networkmanager
@@ -77,6 +84,7 @@ smplayer
 mpv
 sxiv
 w3m
+digikam
 
 # SOUND
 alsa-utils
