@@ -20,13 +20,14 @@ ranger
 nautilus
 transmission-gtk
 deepin-screenshot
-deepin-system-monitor
+glances
 htop
 nitrogen
 cups
 dnsutils
 wget
 lxsession
+etcher-bin
 
 # BROWSER
 chromium
@@ -42,6 +43,11 @@ okular
 git
 gvim
 zeal
+tk
+python-matplotlib
+python-numpy
+python-scipy
+python-pillow
 
 # MARKUP LANGUAGES / LATEX / MARKDOWN
 pandoc
@@ -66,6 +72,7 @@ p7zip
 cmake
 lshw
 rsync
+smartmontools
 
 # CONNECTION
 networkmanager
@@ -78,6 +85,7 @@ smplayer
 mpv
 sxiv
 w3m
+digikam
 
 # SOUND
 alsa-utils
@@ -85,8 +93,7 @@ pulseaudio
 playerctl
 pavucontrol
 
-# FONTS / VISUALS / LOOKS / APPEARANCE
-lxappearance
+# FONTS
 ttf-font-awesome
 ttf-dejavu
 ttf-inconsolata
@@ -95,6 +102,13 @@ terminus-font
 adobe-source-code-pro-fonts
 powerline
 powerline-fonts
+
+# THEMES
+arc-icon-theme
+arc-gtk-theme
+
+# VISUALS / LOOKS / APPEARANCE
+lxappearance
 python-pywal
 compton
 
