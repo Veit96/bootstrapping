@@ -65,6 +65,7 @@ openconnect
 p7zip
 cmake
 lshw
+rsync
 
 # CONNECTION
 networkmanager
@@ -96,3 +97,6 @@ powerline
 powerline-fonts
 python-pywal
 compton
+
+# CODECS / FILESYSTEM / BOOT
+exfat-utils
