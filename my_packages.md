@@ -73,6 +73,8 @@ cmake
 lshw
 rsync
 smartmontools
+trash-cli
+detox
 
 # CONNECTION
 networkmanager
