@@ -14,6 +14,7 @@ rofi
 lightdm
 lightdm-webkit2-greeter
 lightdm-webkit-theme-litarvan
+lightdm-webkit2-theme-sapphire
 
 # UTILITY
 ranger
