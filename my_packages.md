@@ -83,12 +83,14 @@ network-manager-applet
 bluez
 bluez-utils
 
-# MEDIA / VIDEO
+# MEDIA / PHOTO / VIDEO
 smplayer
 mpv
 sxiv
 w3m
 digikam
+hugin
+
 
 # SOUND
 alsa-utils
