@@ -240,7 +240,7 @@ Afterwards put `vm.swappiness=10` in `/etc/sysctl.d/99-sysctl.conf`
 - file manager -> ranger
 - browser -> qutebrowser
 - wallpaper setter -> nitrogen, wal
-- image viewer -> sxiv
+- image viewer -> sxiv, oeg
 - pdf viewer -> zathura, okular
 - office ->
 - video/audo player -> smplayer, mpv
@@ -292,14 +292,18 @@ wpa_supplicant_gui
 
 - check for errors
 
-`sudo systemctl --failed
-sudo journalctl -p 3 -xb`
+```bash
+sudo systemctl --failed
+sudo journalctl -p 3 -xb
+```
 
 - wifi settings with nmcli
 
-`nmcli radio wifi on/off
+```bash
+nmcli radio wifi on/off
 nmcli con
-nmcli dev`
+nmcli dev
+```
 
 
 

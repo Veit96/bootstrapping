@@ -1,0 +1,6 @@
+chmod 755 $(find /path/to/base/dir -type d)
+chmod 644 $(find /path/to/base/dir -type f)
+
+find /opt/lampp/htdocs \
+\( -type f -exec chmod u+rw,go+r {} \; \) , \
+\( -type d -exec chmod u+rwxs,go+rx {} \; \)
