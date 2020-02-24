@@ -62,6 +62,7 @@ rxvt-unicode
 urxvt-perls
 tmux
 neofetch
+parallel
 
 # COMMAND LINE TOOLS
 python-pip
@@ -82,6 +83,7 @@ networkmanager
 network-manager-applet
 bluez
 bluez-utils
+gvfs-mtp
 
 # MEDIA / PHOTO / VIDEO
 smplayer
@@ -95,6 +97,8 @@ hugin
 # SOUND
 alsa-utils
 pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
 playerctl
 pavucontrol
 
